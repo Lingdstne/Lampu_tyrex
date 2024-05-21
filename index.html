@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Toggle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #lightbulb {
+            cursor: pointer;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="lightbulb" src="off.png" alt="Light Bulb" onclick="toggleLight()">
+        <p>Click lampu untuk hidupkan TOD.</p>
+    </div>
+    <script>
+        function toggleLight() {
+            var bulb = document.getElementById('lightbulb');
+            if (bulb.src.includes('off.png')) {
+                bulb.src = 'on.png';
+            } else {
+                bulb.src = 'off.png';
+            }
+        }
+    </script>
+</body>
+</html>
